@@ -1020,12 +1020,34 @@ li {
     left: -10%;
   }
 
-  /* --------------------------------SERVICE SECTION */
+  /* --------------------------------SERVICEs SECTION */
   .section__title {
     font-size: var(--font-size-st-mc);
   }
 
   .services__service-cards--card {
     border: none !important;
+  }
+
+  /* --------------------------------NEWS SECTION */
+  .news__article--img {
+    grid-column: 1 / -1;
+  }
+
+  .news__article--content {
+    grid-column: 1 / -1;
+
+    background-color: var(--color-secondary-m-2);
+  }
+
+  .news__article--content__mini-title,
+  .news__article--content__link::after {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+
+  .news__article--content__title,
+  .news__article--content__link {
+    color: var(--color-primary);
   }
 }
