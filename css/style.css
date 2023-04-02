@@ -256,12 +256,13 @@ li {
 
 .hero__content--links {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .hero__content--links__my-works,
 .hero__content--links__contact {
-  flex-basis: 30%;
+  flex-basis: 15rem;
   padding: var(--padding-st-s-v) var(--padding-st-m-h);
   font-size: var(--font-size-st-sc);
   border-radius: 5rem;
@@ -917,6 +918,7 @@ li {
     padding: var(--padding-d-l-v) var(--padding-d-mc-h);
   }
 
+  /* -------------------------------HEADER SECTION */
   .header__nav {
     height: 100vh;
     flex-direction: column;
@@ -925,7 +927,7 @@ li {
     padding: var(--padding-d-m-v) var(--padding-d-l-h);
     background-color: var(--color-secondary-m-2);
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.65s ease-in-out;
 
     position: fixed;
     top: 0;
@@ -972,7 +974,7 @@ li {
     align-self: flex-end;
   }
 
-  /* Dynamic class */
+  /********_*___*__*_**_*_*_*_*__*_*_*_*_ Dynamic class */
 
   .display__nav {
     transform: translateX(0);
@@ -988,5 +990,14 @@ li {
 
   .hamburger__line-3 {
     transform: rotate(-45deg) translateX(-0.2rem) translateY(-2.1rem);
+  }
+
+  /* -------------------------------HERO SECTION */
+  .hero__content {
+    flex-basis: auto;
+  }
+
+  .hero__bg {
+    width: 100%;
   }
 }
