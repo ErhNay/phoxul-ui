@@ -549,11 +549,12 @@ li {
   width: 50%;
   left: 0;
   bottom: 0;
-  background-color: var(--color-quaternary);
+  background-color: var(--csolor-quaternary);
 }
 
 .my-works__areas {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -572,7 +573,7 @@ li {
 
 .my-works__imgs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-template-rows: repeat(4, min-content);
   gap: 2rem;
 }
@@ -913,6 +914,14 @@ li {
 
 /* ************************************************************* MEDIA QUERIES */
 
+@media screen and (max-width: 1300px) {
+  /* -----------------------------MY WORKD */
+  .my-works__imgs--img {
+    grid-column: auto / auto !important;
+    grid-row: auto / auto !important;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .section__padding {
     padding: var(--padding-d-l-v) var(--padding-d-mc-h);
@@ -1020,7 +1029,7 @@ li {
     left: -10%;
   }
 
-  /* --------------------------------SERVICEs SECTION */
+  /* --------------------------------SERVICES SECTION */
   .section__title {
     font-size: var(--font-size-st-mc);
   }
@@ -1050,4 +1059,6 @@ li {
   .news__article--content__link {
     color: var(--color-primary);
   }
+
+  /* -----------------------------------------MY WORKS */
 }
