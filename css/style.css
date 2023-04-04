@@ -712,7 +712,7 @@ li {
 }
 
 .contact__testimonial {
-  flex-basis: 40%;
+  flex-basis: 50%;
 
   display: flex;
   flex-direction: column;
@@ -765,8 +765,8 @@ li {
 
   background-image: linear-gradient(
       to bottom,
-      var(--color-tertiary),
-      var(--color-secondary-m)
+      var(--color-secondary-m-2),
+      var(--color-secondary-m-2)
     ),
     url('../images/footer-bg.jpg');
 
@@ -859,7 +859,7 @@ li {
 }
 
 .footer__author--quick-contact {
-  flex-basis: 3%;
+  flex-basis: 35%;
 }
 
 .footer__author--info__para {
@@ -1060,5 +1060,82 @@ li {
     color: var(--color-primary);
   }
 
-  /* -----------------------------------------MY WORKS */
+  /* -----------------------------------------CONTACT */
+  .contact {
+    flex-wrap: wrap;
+    row-gap: 4rem;
+  }
+
+  .contact__info,
+  .contact__testimonial {
+    flex-basis: 100%;
+  }
+
+  .contact__testimonial {
+    background-color: var(--color-secondary-m-2);
+  }
+
+  .contact__testimonial--info__img img {
+    border: 2px solid var(--color-quaternary);
+    box-shadow: 0 5px 0.5rem #ffffff5d;
+  }
+
+  .contact__testimonial--info__name {
+    color: var(--color-primary);
+  }
+
+  /* -----------------------------------------FOOTER --------*/
+  .footer__news-letter {
+    flex-wrap: wrap;
+    gap: 2rem 0;
+  }
+  .footer__news-letter--content,
+  .footer__news-letter--form {
+    flex-basis: auto;
+  }
+
+  .footer__news-letter--form input {
+    font-size: var(--font-size-st-s);
+    padding: var(--padding-st-s-v) var(--padding-st-s-h);
+  }
+
+  .footer__author {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer__author--info,
+  .footer__author--quick-links {
+    border: none;
+  }
+
+  .footer__author--info,
+  .footer__author--quick-links,
+  .footer__author--contact {
+    flex-basis: auto;
+  }
+
+  .footer__copy-rights {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section__padding {
+    padding: var(--padding-st-l-v) var(--padding-st-s-h);
+  }
+
+  /* --------------------MY WORKS */
+  .my-works__imgs {
+    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+
+  .services__service-cards {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  .footer__copy-rights--social {
+    flex-basis: 50%;
+    justify-content: space-between;
+  }
 }
